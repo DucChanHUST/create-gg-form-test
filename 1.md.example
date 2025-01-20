@@ -1,0 +1,11 @@
+1. Hàm kích hoạt sigmoid có nhược điểm nào dưới đây?
+a) Trung bình đầu ra khác 0  
+b) Bão hòa gradient  
+c) Tốn kém tính toán hàm mũ  
+d) Tất cả các đáp án trên  
+
+2. Điểm yên ngựa (saddle point) ảnh hưởng đến thuật toán SGD như thế nào?
+a. SGD hội tụ nhanh hơn  
+b. SGD dừng lại vì gradient bằng 0  
+c. SGD bỏ qua điểm yên ngựa  
+d. SGD cần thêm các phương pháp tối ưu bậc hai  

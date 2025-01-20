@@ -1,0 +1,4 @@
+*.csv
+*.md
+# not ignore file has "example" in the name
+!*example*
