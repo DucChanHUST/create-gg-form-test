@@ -2,6 +2,9 @@ import re
 import os
 import csv
 
+def replace_multiple(text):
+    return re.sub(r'[,;]', '.', text)
+
 def read_questions_and_options(md_file):
     questions = []
     pattern = r'^\d+\. (.*)'
@@ -18,11 +21,11 @@ def read_questions_and_options(md_file):
             if match:
                 if question:
                     questions.append((question, options))
-                question = match.group(1).replace(',', ';')
+                question = replace_multiple(match.group(1))
                 options = []
 
             if line.startswith('a') or line.startswith('b') or line.startswith('c') or line.startswith('d') or line.startswith('e') or line.startswith('f') or line.startswith('g'):
-                options.append(line[2:].strip().replace(',', ';'))
+                options.append(replace_multiple(line[2:].strip()))
 
         if question:
             questions.append((question, options))
